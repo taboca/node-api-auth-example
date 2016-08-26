@@ -1,0 +1,16 @@
+{
+  "name": "Check",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "main": "serverCheck.js",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "MarcioSGalli"
+}
