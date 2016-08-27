@@ -16,3 +16,5 @@ For testing
 * You can then sign this new envelope using the clientSign.js > request-signed.json
 * turn on your server "API", the serverCheck.js
 * Call.sh
+
+Notice that this assumes the signed data is a string within a JSON value, the envelope
