@@ -1,12 +1,12 @@
-## Example for your first server API
+## Technote: Handling Simple client-server Authenticated API call   
 
-In this repository you will have a node client and a node server app. We also have a JSON request which the server will try to authenticate.
+This is a repo-technote, which is aimed to explain a very basic architecture, alongside with a basic implementation, for a system of client and server software that exchanges data and attemps to establish an authenticated request. 
 
 ### Secret and key value note 
 
-Notice that both the JS client and the JS server have the secret within the code, therefore the secret is not being transfered from the client to the server. 
+Notice that both, the JS client and the JS server counterpart, have the secret key which is kept within the code. This is fine because the main point here is that the secret component is not passed through the network (when curl calls the server). 
 
-Why you see a key value being passed? this is for nothing. This is just because in a real world code, the key is how I would be able to find quicky using associative array approach, or a database; therefore the idea of using/passing a key is simply to help the server to locate the secret sibbling. 
+However, you will notice that a key is being passed in the JSON envelope and not being used. This is left there simply because, in a real world, is should the a key that is going to help you locate the secret counterpart, using an associative array structure or a database. 
 
 ### Envelope
 
@@ -22,9 +22,30 @@ With this, you have to be aware that the signature generation depends on a sorti
 
 * Server code, that also generates a signature, using the server-only secret (which is assumed to be the same) and also serializing the body JSON envelope part, with same approach: sorting and stripping spaces. 
 
-### For testing
+## Testing
 
-* You can change the key value, within the request-unsigned.json. 
-* You can then sign this new envelope using the clientSign.js > request-signed.json
-* turn on your server "API", the serverCheck.js
-* Call.sh
+Now you can get to work the full flow. First we will sign the JSON. Second you will run the server to listen. Then you will perform a curl command, to call the server passing the JSON, then you will notice the server to display the results: both signatures the client and the server-based one. Therefore, the idea is that you can visually see that the server found the same key if things works as expected. 
+
+
+### Run the server
+
+```
+node serverCheck.js
+```
+
+### Sign the JSON
+
+```
+node clientSign.js request-unsigned.json > request-signed.json
+```
+
+### Make a call
+
+```
+./call.sh
+```
+
+### Contribute with thoughts
+
+Just send your notes to me or patches
+
