@@ -2,7 +2,7 @@ const crypto = require('crypto');
 
 var data = require('./request-unsigned.json');
 
-const secret = '6044';
+const secret = '7374';
 
 //var dString = JSON.stringify(data.envelope);
 var dString = data.envelope;
