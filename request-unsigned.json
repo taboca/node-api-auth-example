@@ -1,5 +1,8 @@
 {
- "envelope": "key=6917&articleKey=ag5kZXZ-dGVsYXNsaWRlc3ISCxIHQXJ0aWNsZSIFbmg0MTAM&title=Processo de mostur",
+ "envelope": {   
+    "key": 4982,
+    "articleKey":"ag5kZXZ-dGVsYXNsaWRlc3ISCxIHQXJ0aWNsZSIFbmg0MTAM"
+ },
  "signature": ""
 }
   

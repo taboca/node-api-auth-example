@@ -6,7 +6,9 @@
   "main": "serverCheck.js",
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "node-json-minify": "~1.0.0",
+    "canonical-json": "0.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
